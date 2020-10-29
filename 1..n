@@ -1,0 +1,34 @@
+1. 0001
+react-native 이르다 판단함
+react 설치
+
+window 10 install - yarn
+//윈도우 10에서 yarn을 설치하기 위해서는 node.js가 설치돼 있어야 함
+//yarn은 npm(패키지관리)의 상위개념으로 쓰면 좋음
+//yarn을 설치하기 위해 scoop을 통해 설치할 것임
+
+window key -> cmd -> powershell 
+//powershell의 버전이 5.0이상인지 확인해야함
+//윈도우 7, 윈도우 서버 2008 이전버전인 경우 설치되어 있지 않을 수 있음
+-> $psversiontable.psversion.magor(버전확인)
+-> set-executionpolicy remotesigned -scope currentuser
+//제한되는 스크립트가 있는지 확인
+//스쿱 설치 url 경로
+-> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+or -> iwr - useb get.scoop.sh | iex
+//스쿱의 지정디렉토리와 관리자전역디렉토리 설치중 user 디렉토리로 설치
+$env:SCOOP='C:\scoop'
+[environment]::setEnvironmentVariable('SCOOP',$env:SCOOP,'User')
+iwr -useb get.scoop.sh | iex
+
+https://github.com/lukesampson/scoop/wiki/Quick-Start
+https://classic.yarnpkg.com/en/docs/install#windows-stable
+
+//*PS보다 git base에 더 가까움
+//yarn 설치
+->scoop install yarn
+//react app 설치
+->npm install -g create-react-app
+//create-react-app hello-react
+//cd hello-react
+//yarn start
