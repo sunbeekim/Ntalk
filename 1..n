@@ -75,9 +75,28 @@ https://classic.yarnpkg.com/en/docs/install#windows-stable
       표시할 내용들을 나타내는 구간//기초 태그 - https://pridiot.tistory.com/6
     </body>
     </html>
-  3.2 css
+  3.2 css - Cascading Style Sheets
+    HTML, XHTML, XML 같은 문서의 스타일을 꾸미기위한 스타일 시트 언어
+  3.3 dom - Document Object Model
+    DOM(문서객체모델) 웹페이지에 대한 프로그래밍 인터페이스
+    기본적으로 여러 프로그램(DevTools(여러 기능을 포함한 Spring Boot 모듈))들이 페이지의 콘텐츠 및 구조, 그리고 스타일을 읽고 조작할 수 있는 API를 제공
+    DOM은 HTML 문서의 내용을 볼 수 있는 인터페이스 역할을 하는 동시에 동적 자원이 되어 수정될 수 있음
+    <!doctype html>
+    <html> //DOM은 아래의 <head>나 <body>, <tbody>등의 구조가 정의되지 않아도 문서의 내용과 구조가 객체모델로 저장되어 다양한 프로그램에서 사용 될 수 있음
+      <i>hello</i>
+      <p>world</p>
+    </html>
     
-  3.3 dom
+    JavaScript - helloworld.js
+      const i = document.createElement('i');
+      const iContent = document.createTextNode('HELLO');
+      i.appendChild(iContent);
+      document.body.appendChild(i);
+      const p = document.createElement('p');
+      const pContent = document.createTextNode('WORLD');
+      p.appendChild(pContent);
+      document.body.appendChild(p);
+      
   3.4 svg
   3.5 xhtml
   3.6 xml
